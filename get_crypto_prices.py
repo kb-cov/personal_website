@@ -23,13 +23,3 @@ def get_crypto_data(endpoint_list):
         data = response.json()
         crypto_listings.append(data)
     return crypto_listings
-
-#print(get_crypto_data(endpoint_list))
-
-"""
-    for crypto in crypto_listings:
-        if crypto['data']['base'] != 'SHIB':
-            print(f"{crypto['data']['base']} : {float(crypto['data']['amount']):.4f} {crypto['data']['currency']}")
-        else:
-            print(f"{crypto['data']['base']} : {float(crypto['data']['amount']):.8f} {crypto['data']['currency']}")
-"""
