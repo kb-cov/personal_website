@@ -12,6 +12,24 @@ body {
   text-align: center;
 }
 
+nav {
+  text-align: left;
+  padding: 20px;
+}
+
+a {
+  color: #82aaff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #82aaff;
+}
+
 h1 {
   margin-top: 250px;
   margin-bottom: 50px;
@@ -19,5 +37,9 @@ h1 {
 }
 
 h2 {
-    margin-bottom: 10px;
-  }
+  margin-bottom: 10px;
+}
+
+.navitem {
+  margin-right: 30px;
+}
