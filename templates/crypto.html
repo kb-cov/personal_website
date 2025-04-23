@@ -1,0 +1,39 @@
+{% extends "base.html" %} 
+
+{% block title %} Kev's Crypto Page {% endblock title %} 
+
+{% block content %}
+    <br />
+    <h2>Latest Crypto Prices</h2>
+    <table
+      style="border: 3px solid blue; margin-left: auto; margin-right: auto"
+    >
+      <thead>
+        <tr>
+          <th style="width: 100px">Currency</th>
+          <th style="width: 140px">Current Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for crypto in crypto_data %}
+          {%if crypto.data.base != "SHIB" %}
+            <tr>
+              <td style="text-align: center; width: 100px">{{ crypto.data.base }}/{{ crypto.data.currency }}</td>
+              <td style="text-align: center">
+                {{ crypto.data.amount|float|round(3) }}
+              </td>
+            </tr>
+          {% else %}
+            <tr>
+              <td style="text-align: center; width: 100px">{{ crypto.data.base }}/{{ crypto.data.currency }}</td>
+              <td style="text-align: center">
+                {{ crypto.data.amount }}
+              </td>
+            </tr>
+          {% endif %}
+        {% endfor %}
+      </tbody>
+    </table>
+    <br />
+    <a href="https://www.coinbase.com/home">COINBASE</a>
+{% endblock content %}
